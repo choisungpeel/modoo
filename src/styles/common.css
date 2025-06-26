@@ -1,0 +1,178 @@
+@import url('colors.css');
+
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('../fonts/NanumGothic.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--color-light-background);
+  box-shadow: 0 2px 4px var(--color-shadow);
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.header-menu {
+  display: flex;
+  gap: 20px;
+}
+
+
+.menu-link {
+  font-size: 1rem;
+  color: var(--color-text);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-link:hover {
+  background-color: var(--color-border);
+}
+
+section {
+  padding: 5% 10%;
+  margin: 0;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+footer {
+  background-color: var(--color-dark-background);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1vh;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg1 {
+  background-color: var(--color-primary);
+}
+
+.bg2 {
+  background-color: var(--color-light-background);
+}
+
+.bg3 {
+  background-color: #f7f7f7;
+}
+
+.highlight1 {
+  color: var(--color-yellow)
+}
+
+.highlight2 {
+  color: #ff8e61
+}
+
+.button1 {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .menu-link {
+    width: 100%;
+    padding: 10px;
+  }
+
+  section {
+    padding: 10% 5%;
+  }
+
+  .button1 {
+    width: 100%;
+    text-align: center;
+  }
+}
